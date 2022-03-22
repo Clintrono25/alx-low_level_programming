@@ -1,6 +1,6 @@
 #include "main.h"
+#inlcude <stdio.h>
 #include <unistd.h>
-
 /**
  * _puts - prints a string, to stdout
  * @str: value to evaluate.
@@ -12,8 +12,8 @@ void _puts(char *str)
 
 	while (*(str + l) != '\0')
 	{
-		_putchar(str[l]);
+		putchar(str[l]);
 		l++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
