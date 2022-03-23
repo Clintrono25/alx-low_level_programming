@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
 /**
 * print_diagonal - draws a diagonal line
 * @n: takes in an integer
@@ -15,12 +16,12 @@ void print_diagonal(int n)
 		{
 			if (i == j)
 			{
-				_putchar('\\');
-				_putchar('\n');
+				putchar('\\');
+				putchar('\n');
 			}
 			else
 			{
-				_putchar(' ');
+				putchar(' ');
 			}
 		}
 	}
