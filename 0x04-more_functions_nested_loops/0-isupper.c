@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "main.h"
+/**
+ * _isupper - checks for uppercase character
+ * @c: Variable text
+ * Return: Alwyas 0. *
+ */
+int _isupper(char c)
+{
+	c = 'A';
+	if(c >= 'A' && c <= 'Z')
+	{
+	return 1;		
+	}
+	else
+	{
+	return 0;
+	}
+}
