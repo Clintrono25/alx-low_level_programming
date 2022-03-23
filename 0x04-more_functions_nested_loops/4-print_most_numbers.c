@@ -3,7 +3,7 @@
 /*
  * print_most_numbers - prints 0-9 except 2,4
  */
-int void print_most_numbers(void)
+void print_most_numbers(void)
 {
 	char c;
 	
