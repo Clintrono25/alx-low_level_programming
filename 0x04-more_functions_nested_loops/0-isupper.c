@@ -5,9 +5,8 @@
  * @c: Variable text
  * Return: Alwyas 0. *
  */
-int _isupper(char c)
+int _isupper(int c)
 {
-	c = 'A';
 	if(c >= 'A' && c <= 'Z')
 	{
 	return 1;		
