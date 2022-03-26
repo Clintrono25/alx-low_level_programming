@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* main - Print the word "Holberton"
+* main - Print the word "School"
 *
 * Return: Always 0 (Success)
 */
