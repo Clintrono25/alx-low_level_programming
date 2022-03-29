@@ -17,11 +17,11 @@ void print_chessboard(char (*a)[8])
 		{
 			if (j == 7)
 			{
-				putchar(a[i][j]);
-				putchar('\n');
+				_putchar(a[i][j]);
+				_putchar('\n');
 			}
 			else
-				putchar(a[i][j]);
+				_putchar(a[i][j]);
 		}
 	}
 }
