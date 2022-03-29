@@ -18,7 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		if (s[i] != 32)
 		{
-			for (j = 0; accpet[j] != '\0'; j++)
+			for (j = 0; accept[j] != '\0'; j++)
 			{
 				if (s[i] == accept[j])
 					c++;
@@ -26,6 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else
 			return (c);
+
 	}
 	return (c);
 }
