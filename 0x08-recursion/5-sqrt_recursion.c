@@ -10,5 +10,5 @@
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n);
-	return (sqtRecursive(2, n, n));
+	return (_sqrt_recursion(2, n, n));
 }
