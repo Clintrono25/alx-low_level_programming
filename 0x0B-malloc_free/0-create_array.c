@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /*
- * create_array - function that creates an array
+ * *create_array - function that creates an array
  * and initializes with specific char
  * @size: size of the array
  * @c: initial char c
@@ -24,4 +24,4 @@ char *create_array(unsigned int size, char c)
 		i++;
 	}
 	return (str);
-}		
+}
