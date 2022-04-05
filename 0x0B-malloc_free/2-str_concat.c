@@ -1,38 +1,52 @@
 #include "main.h"
 #include <stdlib>
 /**
- * *str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: pointer to new space in memory or null
- **/
+ * str_concat - concatenate two strings
+ * @s1: a pointer to the first string
+ * @s2: a pointer to the second string
+ *
+ * Return: NULL if memory allocation fails,
+ * otherwise a pointer to a the new string
+ */
 char *str_concat(char *s1, char *s2)
 {
-	char *strDup;
-	int i, j;
-	if (s1 == NULL)
+	unsigned int len1 = 0;
+	unsigned int len2 = 0;
+	char *cat;
+
+	if (s1)
+	{
+		while (s1[len1])
+			++len1;
+	}
+	else
+	{
 		s1 = "";
-	if (s2 == NULL)
+	}
+	if (s2)
+	{
+		while (s2[len2])
+			++len2;
+	}
+	else
+	{
 		s2 = "";
-	i = j = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
-		j++;
-	strDup = malloc(sizeof(char) * (i + j + 1));
-	if (strDup == NULL)
+	}
+
+	cat = (char *) malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (!cat)
 		return (NULL);
-	i = j = 0;
-	while (s1[i] != '\0')
+	if (s1)
 	{
-		strDup[i] = s1[i];
-		i++;
+		for (len1 = 0; s1[len1]; ++len1)
+			cat[len1] = s1[len1];
 	}
-	while (s2[j] != '\0')
+	if (s2)
 	{
-		strDup[i] = s2[j];
-		i++, j++;
+		for (len2 = 0; s2[len2]; ++len2)
+			cat[len1 + len2] = s2[len2];
 	}
-	strDup[i] = '\0';
-	return (strDup);
+	cat[len1 + len2] = '\0';
+	return (cat);
 }
