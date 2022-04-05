@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
-/*
- * create_array - function that creates an array
+/**
+ * *create_array - function that creates an array
  * and initializes with specific char
  * @size: size of the array
  * @c: initial char c
  * Return: pointer to array or null
- */
+ **/
 char *create_array(unsigned int size, char c)
 {
 	char *str;
@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 	str = malloc(sizeof(char) * size);
-	if = (str == NULL)
+	if (str == NULL)
 		return (NULL);
 	i = 0;
 	while (i < size)
@@ -24,4 +24,4 @@ char *create_array(unsigned int size, char c)
 		i++;
 	}
 	return (str);
-}		
+}
