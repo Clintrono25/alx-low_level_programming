@@ -1,52 +1,35 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - concatenate two strings
- * @s1: a pointer to the first string
- * @s2: a pointer to the second string
- *
- * Return: NULL if memory allocation fails,
- * otherwise a pointer to a the new string
- */
-char *str_concat(char *s1, char *s2)
+ * alloc_grid - creates a 2d integer grid
+ * @width: number of columns
+ * @height: number of rows
+ * Return: pointer to grid or null
+ **/
+int **alloc_grid(int width, int height)
 {
-	unsigned int len1 = 0;
-	unsigned int len2 = 0;
-	char *cat;
+	int **grid, i, j;
 
-	if (s1)
-	{
-		while (s1[len1])
-			++len1;
-	}
-	else
-	{
-		s1 = "";
-	}
-	if (s2)
-	{
-		while (s2[len2])
-			++len2;
-	}
-	else
-	{
-		s2 = "";
-	}
-
-	cat = (char *) malloc(sizeof(char) * (len1 + len2 + 1));
-
-	if (!cat)
+	if (width < 1 || height < 1)
 		return (NULL);
-	if (s1)
+	grid = malloc(sizeof(int *) * height);
+	if (grid == NULL)
+		return (NULL);
+	for (i = 0; i < height; i++)
 	{
-		for (len1 = 0; s1[len1]; ++len1)
-			cat[len1] = s1[len1];
+		grid[i] = malloc(sizeof(int) * width);
+		if (grid[i] == NULL)
+		{
+			while (--i >= 0)
+				free(grid[i]);
+			free(grid);
+			return (NULL);
+		}
 	}
-	if (s2)
+	for (i = 0; i < height; i++)
 	{
-		for (len2 = 0; s2[len2]; ++len2)
-			cat[len1 + len2] = s2[len2];
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
 	}
-	cat[len1 + len2] = '\0';
-	return (cat);
+	return (grid);
 }
