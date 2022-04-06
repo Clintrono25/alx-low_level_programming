@@ -1,8 +1,4 @@
 #include <stdio.h>
-int main(int argc, char* argv[])
-{
-	int n, i, ptr*
-		scanf#include <stdio.h>
 /**
  * main - a program that prints all arguments it receives.
  * @argc: arguement count
@@ -15,4 +11,3 @@ int main(int argc, char *argv[])
 		printf("%s\n", *argv++);
 	return (0);
 }
-
