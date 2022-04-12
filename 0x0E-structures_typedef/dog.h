@@ -1,3 +1,5 @@
+#ifndef MYHEADER-FILE
+#define MYHEADER_FILE dog.ch
 /**
  * struct dog - Define a new struct dog with name, age, owner
  * @name: name of the dog
@@ -10,3 +12,4 @@ struct dog
 	float age;
 	char * owner;
 };
+#endif
