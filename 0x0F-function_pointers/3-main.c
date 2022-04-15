@@ -1,37 +1,37 @@
 #include <stdio.h>
-#include "3-calc.h"
 #include <stdlib.h>
+#include "3-calc.h"
 
 /**
-*main - Take the arguments in command line to perform simple operations
-*
-*@argc: Number of arguments in the command line, Argumet count
-*@argv: Values to the operations placesl Argument vector
-*Return: 0
-*/
-
-int main(int argc, char **argv)
+ * main - A program that performs simple arithmetic operations (+, -, *, /, %)
+ * @argc: The number of command-line arguments
+ * @argv: The command-line arguments
+ *
+ * Return: 0 if successful, 98 if the number of arguments are incorrect,
+ * 99 for an invalid operation and 100 when there's a divide by 0 error
+ */
+int main(int argc, char *argv[])
 {
+	int result, left, right;
+	int (*op_func)(int, int);
 
-	if (argc != 4)
+	if (argc == 4)
+	{
+		left = atoi(argv[1]);
+		right = atoi(argv[3]);
+		op_func = get_op_func(argv[2]);
+		if (op_func == NULL)
+		{
+			printf("Error\n");
+			exit(99);
+		}
+		result = op_func(left, right);
+		printf("%d\n", result);
+	}
+	else
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2][1] != '\0' || (get_op_func)(argv[2]) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	if ((argv[2][0] == '%' || argv[2][0] == '/') && argv[3][0] == '0')
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-	printf("%i\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
-
 	return (0);
-
 }
