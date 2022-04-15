@@ -1,8 +1,8 @@
-#include "main.h"
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * sum_them_all - give the number of its params
+ * sum_them_all - sum all its arguments
  * @n: constant integer which stores the number of parametere
  * Return: Number of parameters
  */
