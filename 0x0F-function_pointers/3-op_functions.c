@@ -1,57 +1,70 @@
-#include <stdio.h>
-#include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
- * op_add - adds two int
- * @a: number 1
- * @b: number 2
- * Return: Sum of a and b
+ * op_add - Computes the sum of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The sum
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - finds the diff btw  two int
- * @a: number 1
- * @b: number 2
- * Return: diff of a and b
+ * op_sub - Computes the difference of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The difference
  */
-int op_add(int a, int b)
+int op_sub(int a, int b)
 {
-        return (a - b);
+	return (a - b);
 }
+
 /**
- * op_mul - product of  two int
- * @a: number 1
- * @b: number 2
- * Return: resulst of multiplication
+ * op_mul - Computes the product of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The product
  */
-int op_add(int a, int b)
+int op_mul(int a, int b)
 {
-        return (a * b);
+	return (a * b);
 }
+
 /**
- * op_div - divides two int
- * @a: number 1
- * @b: number 2
- * Return: result of division 
+ * op_div - Computes the quotient of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The quotient if b is not 0, otherwise 0 and program fails
  */
 int op_div(int a, int b)
 {
-	if (b == 0)
-		return (-1);
-	return (a / b);
+	if (b != 0)
+		return (a / b);
+	puts("Error");
+	exit(100);
+	return (0);
 }
+
 /**
- * op_mod - calculates mod of two ints
- * @a: number 1
- * @b: number 2
- * Return: mod of 1, 2
- **/
+ * op_mod - Computes the remainder of the division of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The remainder if b is not 0, otherwise 0 and program fails
+ */
 int op_mod(int a, int b)
 {
-	if (b == 0)
-		return (-1);
-	return (a % b);
+	if (b != 0)
+		return (a % b);
+	puts("Error");
+	exit(100);
+	return (0);
 }
