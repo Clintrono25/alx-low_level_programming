@@ -1,1 +1,1 @@
-How to create Static libraries in C
+Learn how to create Static libraries in C programming
