@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * set_bit - sets bit at index to 1
  * @n: pointer to number
