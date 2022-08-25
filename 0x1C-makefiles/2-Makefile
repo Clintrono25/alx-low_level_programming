@@ -1,9 +1,9 @@
-# Make Holberton executable with variables: CC, SRC, OBJ, NAME
+# Make School executable with variables: CC, SRC, OBJ, NAME
 
 CC = gcc
-SRC = main.c holberton.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = holberton
+NAME = school
 
 all: $(OBJ)
 	$(CC) $? -o $(NAME)
